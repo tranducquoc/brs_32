@@ -1,0 +1,39 @@
+<h3 class="menu-left-header text-center">
+  <label class="margin-0"><%= t "books.menu_left.category" %></label>
+</h3>
+<ul class="menu-left">
+  <% @categories.each do |category| %>
+    <li>
+      <a href="#" title="<%= category.name %>">
+        <%= category.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<h3 class="menu-left-header text-center">
+  <label class="margin-0"><%= t "books.menu_left.author" %></label>
+</h3>
+<ul class="menu-left">
+  <% @authors.each do |author| %>
+    <li><%= author.name %></li>
+  <% end %>
+</ul>
+
+<h3 class="menu-left-header text-center">
+  <label class="margin-0"><%= t "books.menu_left.publisher" %></label>
+</h3>
+<ul class="menu-left">
+  <% @publishers.each do |publisher| %>
+    <li><%= publisher.name %></li>
+  <% end %>
+</ul>
+
+<h3 class="menu-left-header text-center">
+  <label class="margin-0"><%= t "books.menu_left.language" %></label>
+</h3>
+<ul class="menu-left">
+  <% @languages.each do |language| %>
+    <li><%= language.name %></li>
+  <% end %>
+</ul>

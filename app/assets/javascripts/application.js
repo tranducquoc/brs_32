@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require bootstrap.min
+//= require star-rating.min
+//= require theme.min
 //= require_tree .

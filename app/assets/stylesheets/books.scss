@@ -1,0 +1,134 @@
+$border-color: #eaeaea;
+$color: #90949c;
+$color-menu: #00897b;
+$color-shadow: #888888;
+$color-green: #24b840;
+$color-red: #dd2231;
+.menu-left {
+  list-style: none;
+  padding-left: 0px;
+}
+.menu-left li {
+  padding: 5px;
+  border-bottom: 1px solid $border-color;
+}
+.menu-left li a {
+  color: black;
+  display: block;
+}
+.menu-left li:hover {
+  background-color: $color-shadow;
+}
+.menu-left li:hover a{
+  text-decoration: none;
+}
+.color-shadow {
+  color: $color-shadow;
+  font-size: 18px;
+}
+.menu-left-header {
+  background-image: url("../assets/bg_box_head_1.png");
+  background-size: 100% 100%;
+  color: rgb(22, 20, 18);
+  line-height: 80px;
+  text-shadow: rgb(187, 179, 165) 1px 1px;
+}
+.text-center {
+  text-align: center;
+}
+.margin-0 {
+  margin: 0px;
+}
+.padding-0 {
+  padding: 0px;
+}
+.padding-2 {
+  padding: 2px;
+}
+.main-content {
+  height: 500px;
+}
+.padding-top-20 {
+  padding-top: 20px;
+}
+.div-search {
+  background-color: #3E2723;
+  padding: 10px;
+}
+.max-width {
+  width: 100%;
+}
+.book-item {
+  padding: 20px;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  height: 400px;
+  padding: 5px;
+}
+.book-item-img {
+  width: 100%;
+  height: 60%;
+}
+.book-item-button {
+  margin: 1px;
+}
+.book-item-list {
+  list-style: none;
+  padding: 0px;
+}
+.book-item-list li {
+  display: inline-block;
+  width: 31%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid $border-color;
+  color: #8f8f8f;
+  background-color: #e5e5e5;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.book-item-list li:hover {
+  background-color: #ea7696;
+  color: white;
+  border-color: #c00;
+}
+.font-size-10 {
+  font-size: 12px;
+}
+.book-item-price {
+  padding: 8px;
+  background-color: #c00;
+  color: white;
+  display: block;
+  width: 60%;
+  font-size: 15px;
+}
+.book-item-title {
+  font-size: 14px;
+  display: block;
+  display: -webkit-box;
+  line-height: 1;
+  height: 28px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.book-item-title:hover a {
+  text-decoration: none;
+}
+.rating-md {
+  font-size: 15px;
+}
+.show-one-line {
+  font-size: 15px;
+  display: block;
+  display: -webkit-box;
+  line-height: 1;
+  height: 20px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
