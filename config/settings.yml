@@ -1,2 +1,4 @@
 per_page: 20
 books_per_row: 4
+books_filter: {category: "of_category", author: "of_author",
+ publisher: "of_publisher", language: "of_language"}
