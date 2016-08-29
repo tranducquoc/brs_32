@@ -50,3 +50,11 @@ en:
     seesion:
       Signin: "Sign up"
       Login: "Log in"
+  books:
+    index:
+      btn_search: "Search"
+    menu_left:
+      category: "Category"
+      author: "Author"
+      publisher: "Publisher"
+      language: "Language"
