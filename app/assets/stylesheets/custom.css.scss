@@ -124,3 +124,25 @@ footer ul li {
     list-style: none;
   }
 }
+
+/* Users index */
+
+.users {
+  display: block;
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+#search {
+  width: 250px;
+  height: 40px !important;
+}
+#bt_search {
+  width: 80px;
+  height: 40px !important;
+}

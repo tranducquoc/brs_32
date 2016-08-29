@@ -12,6 +12,7 @@ en:
   devise:
     home:
       login: "Login"
+    users: "Users"
     header:
       title: "Book System"
       home: "Home"
@@ -60,6 +61,7 @@ en:
     seesion:
       Signin: "Sign up"
       Login: "Log in"
+
   books:
     index:
       btn_search: "Search"
@@ -68,3 +70,10 @@ en:
       author: "Author"
       publisher: "Publisher"
       language: "Language"
+
+  users:
+    page_title: "Framgia Book System"
+    title: "All Users"
+    exists_user: "Not user"
+    search_text: "search"
+    bt_search: "Search"
