@@ -1,39 +1,72 @@
 <h3 class="menu-left-header text-center">
-  <label class="margin-0"><%= t "books.menu_left.category" %></label>
+  <label class="margin-0">
+    <%= link_to t("books.menu_left.category"), books_path %>
+  </label>
 </h3>
 <ul class="menu-left">
-  <% @categories.each do |category| %>
-    <li>
-      <a href="#" title="<%= category.name %>">
-        <%= category.name %>
-      </a>
-    </li>
+  <%= form_tag("", method: "get") do %>
+    <%= hidden_field_tag :books_filter, Settings.books_filter[:category] %>
+    <% @categories.each do |category| %>
+      <li>
+        <%= label_tag "#{Settings.books_filter[:category]}_#{category.id}",
+          category.name, class: "books-data-filter" %>
+        <%= radio_button_tag Settings.books_filter[:category], category.id,
+          false, class:"display-none", onChange: "changeDataFilter(this)" %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
-
 <h3 class="menu-left-header text-center">
-  <label class="margin-0"><%= t "books.menu_left.author" %></label>
+  <label class="margin-0">
+    <%= link_to t("books.menu_left.author"), books_path %>
+  </label>
 </h3>
 <ul class="menu-left">
-  <% @authors.each do |author| %>
-    <li><%= author.name %></li>
+  <%= form_tag("", method: "get") do %>
+    <%= hidden_field_tag :books_filter, Settings.books_filter[:author] %>
+    <% @authors.each do |author| %>
+      <li>
+        <%= label_tag "#{Settings.books_filter[:author]}_#{author.id}",
+          author.name, class: "books-data-filter" %>
+        <%= radio_button_tag Settings.books_filter[:author], author.id,
+          false, class:"display-none", onChange: "changeDataFilter(this)" %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
-
 <h3 class="menu-left-header text-center">
-  <label class="margin-0"><%= t "books.menu_left.publisher" %></label>
+  <label class="margin-0">
+    <%= link_to t("books.menu_left.publisher"), books_path %>
+  </label>
 </h3>
 <ul class="menu-left">
-  <% @publishers.each do |publisher| %>
-    <li><%= publisher.name %></li>
+  <%= form_tag("", method: "get") do %>
+    <%= hidden_field_tag :books_filter, Settings.books_filter[:publisher] %>
+    <% @publishers.each do |publisher| %>
+      <li>
+        <%= label_tag "#{Settings.books_filter[:publisher]}_#{publisher.id}",
+          publisher.name, class: "books-data-filter" %>
+        <%= radio_button_tag Settings.books_filter[:publisher], publisher.id,
+          false, class:"display-none", onChange: "changeDataFilter(this)" %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
-
 <h3 class="menu-left-header text-center">
-  <label class="margin-0"><%= t "books.menu_left.language" %></label>
+  <label class="margin-0">
+    <%= link_to t("books.menu_left.language"), books_path %>
+  </label>
 </h3>
 <ul class="menu-left">
-  <% @languages.each do |language| %>
-    <li><%= language.name %></li>
+  <%= form_tag("", method: "get") do %>
+    <%= hidden_field_tag :books_filter, Settings.books_filter[:language] %>
+    <% @languages.each do |language| %>
+      <li>
+        <%= label_tag "#{Settings.books_filter[:language]}_#{language.id}",
+          language.name, class: "books-data-filter" %>
+        <%= radio_button_tag Settings.books_filter[:language], language.id,
+          false, class:"display-none", onChange: "changeDataFilter(this)" %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
