@@ -1,23 +1,52 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  devise:
+    home:
+      login: "Login"
+    header:
+      title: "Book System"
+      home: "Home"
+      sign_up: "Sign up"
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      profile: "Profile"
+    confirmation:
+      confirmation_title: "Resend confirmation instructions"
+      confirmation_btn: "Resend confirmation instructions"
+    registrations:
+      edit:
+        title: "Edit "
+        wait_msg: "Currently waiting confirmation for: "
+        edit_pass_msg: "(leave blank if you don't want to change it)"
+        min_characters: "characters minimum"
+        update_btn: "Update"
+        delete_btn: "Delete my account"
+        cancel_title: "Cancel my account"
+        confirm_cancel_msg: "Are you sure?"
+        back_btn: "Back"
+        confirm_msg: "(we need your current password to confirm your changes)"
+      new:
+        title: "Sign Up"
+        signup_btn: "Sign up"
+        min_characters: "characters minimum"
+    shared:
+      login_link: "Login"
+      signup_link: "Sign up"
+      forgot_passowrd: "Forgot your password?"
+      not_recieve_email: "Didn't receive confirmation instructions?"
+      not_unlock: "Didn't receive unlock instructions?"
+      authen_signup: "Sign in with"
+    passwords:
+      edit:
+        password_title: "Change password"
+        change_password: "Change your password"
+        new_password: "New password"
+        min_characters: "min characters"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
+      new:
+        forgot_password_title: "Forgot password"
+        forgot_password: "Forgot your password?"
+        reset_password_button: "Reset password"
+    seesion:
+      Signin: "Sign up"
+      Login: "Log in"
