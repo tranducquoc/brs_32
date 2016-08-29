@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+@import "https://fonts.googleapis.com/css?family=Roboto:300&subset=vietnamese";
 @import "https://fonts.googleapis.com/css?family=PT+Sans+Narrow";
 
 .home {
@@ -21,6 +21,7 @@
 
 .bg_bottom {
   background: url(ui/bg_top_carusel.png) left 0 no-repeat;
+  width: 1000px;
   height: 109px;
   margin-top: 5px;
   margin-bottom: -50px;
@@ -46,7 +47,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   background: url(ui/bg_header.jpg) left 0 no-repeat;
 
   header {
@@ -79,7 +80,6 @@
 
     #menu {
       height: 50px;
-      width: 555px;
       float: right;
       position: relative;
       top: 120px;
@@ -126,6 +126,17 @@
     }
 
     #login_wrapper {
+      width: 215px;
+      float: right;
+      text-align: center;
+      position: relative;
+      top: 29px;
+
+      .user_name_wrapper {
+        position: relative;
+        left: 475px;
+      }
+
       .signin_signup {
         font-family: "PT Sans Narrow", sans-serif;
         font-size: 25px;
@@ -133,13 +144,10 @@
         color: #161412;
         text-align: center;
         text-shadow: 1px 1px #bbb3a5;
-        position: relative;
-        top: 29px;
-        left: 779px;
         text-transform: uppercase;
         text-decoration: none;
         cursor: pointer;
-        margin-right: 20px;
+        margin: 10px;
 
         &:hover {
           color: #464441;
@@ -174,6 +182,126 @@
         font-family: "PT Sans Narrow", sans-serif;
         font-weight: normal;
         letter-spacing: 1px;
+      }
+    }
+  }
+
+  .box-heading{
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #161412;
+    text-align: center;
+    padding-bottom: 30px;
+    text-shadow: 1px 1px #bbb3a5;
+    letter-spacing: 1px;
+    background: url(bg_box_head_1.png) 46% top no-repeat;
+    padding-top: 40px;
+    margin-top: -105px;
+    margin-left: 80px;
+    padding-right: 50px;
+    text-transform: uppercase;
+  }
+
+  #activities_wrapper {
+    width: 1000px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+    text-align: center;
+
+    .activity_item_wrapper {
+      display: inline-block;
+      box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+      margin: 0 2px 15px;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+      background: #FEFEFE;
+      background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+      opacity: 1;
+      width: 100%;
+      text-align: left;
+
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+
+      .poster_info_area {
+        padding: 0 10px;
+        position: relative;
+        border-bottom: 1px solid #d2d2d2;
+        background-color: #f2f2f2;
+        border-radius: 4px 4px 0 0;
+
+        .avatar_area img {
+          float: left;
+          margin: 10px 15px 0 0;
+          padding: 0;
+        }
+
+        .poster_content_area {
+          margin: 0 0 15px 61px;
+          padding: 12px 0 0 0;
+          text-overflow: ellipsis;
+
+          a {
+            text-decoration: none;
+
+            h3 {
+              font: normal 20px "Roboto", sans-serif;
+              margin: 0;
+              border: 0;
+              font-weight: 300;
+              unicode-bidi: normal;
+              text-decoration: none;
+              -webkit-font-smoothing: antialiased;
+            }
+          }
+        }
+      }
+
+      .activity_content_area {
+        border-bottom: 1px solid #d2d2d2;
+
+        .book_cover {
+          width: 100%;
+          height: auto;
+        }
+
+        .activity_text {
+          padding: 10px;
+        }
+      }
+
+      .interaction_area {
+        text-align: center;
+        padding: 10px;
+
+        a {
+          font-size: 20px;
+          cursor: pointer;
+          text-decoration: none;
+
+          b{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            position: relative;
+            top: -3px;
+            left: 5px;
+          }
+        }
       }
     }
   }

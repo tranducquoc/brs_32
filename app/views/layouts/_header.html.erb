@@ -30,19 +30,23 @@
   <% end %>
   <div id="login_wrapper">
     <% if user_signed_in? %>
-      <a href="#" class="dropdown-toggle signin_signup"
-        data-toggle="dropdown">
-        <%= current_user.name %><b class="caret"></b>
-      </a>
-      <ul class="dropdown-menu">
-        <li>
-          <%= link_to (t "devise.header.profile"), edit_user_registration_path %>
-        </li>
-        <li>
-          <%= link_to (t "devise.header.sign_out"), destroy_user_session_path,
-            method: :delete %>
-        </li>
-      </ul>
+        <div class="user_name_wrapper">
+          <a href="#" class="dropdown-toggle signin_signup"
+            data-toggle="dropdown">
+            <%= current_user.name %><b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to (t "devise.header.profile"),
+                edit_user_registration_path %>
+            </li>
+            <li>
+              <%= link_to (t "devise.header.sign_out"),
+                destroy_user_session_path,
+                method: :delete %>
+            </li>
+          </ul>
+        </div>
     <% else %>
       <%= link_to (t "devise.header.sign_in"),
         new_user_session_path,
@@ -53,4 +57,5 @@
     <% end %>
   </div>
 </header>
+
 <div class="bg_bottom"></div>
