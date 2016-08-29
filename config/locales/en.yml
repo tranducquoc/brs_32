@@ -1,4 +1,14 @@
 en:
+  nav_example:
+    audio_books: "Audiobooks"
+    e_books: "e-books"
+    books: "BOOKS"
+    text_books: "TEXTBOOKS"
+    business: "BUSINESS"
+    magazines: "Magazines"
+  title: "Framgia Book Reviewing System"
+  title_short: "FRAMGIA BRS"
+  home: "Home"
   devise:
     home:
       login: "Login"
