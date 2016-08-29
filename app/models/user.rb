@@ -20,4 +20,5 @@ class User < ActiveRecord::Base
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :name, presence: true, length: {maximum: 100}
   validates :password, presence: true, length: {minimum: 6}
+  scope :search, ->(keyword) {where("name LIKE ?", "%#{keyword}%")}
 end

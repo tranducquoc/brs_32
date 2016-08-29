@@ -1,0 +1,11 @@
+<% provide :title, t("users.title") %>
+<h1><%= t "users.title" %></h1>
+<%= form_tag users_path, method: :get do %>
+  <%= text_field_tag :search, params[:search],
+    placeholder: t("users.search_text"), class: "form-control" %>
+  <%= submit_tag t("users.bt_search"), class: "btn btn-primary" %>
+<% end %>
+<ul class = "users" >
+  <%= render @users %>
+</ul>
+<%= paginate @users %>

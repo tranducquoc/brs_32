@@ -18,6 +18,7 @@ gem "devise"
 gem "cancancan"
 gem "whenever"
 gem "sidekiq"
+gem "kaminari"
 
 
 group :development, :test do
