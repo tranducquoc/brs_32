@@ -12,6 +12,7 @@ class Book < ActiveRecord::Base
   validates :title, presence: true, length: {minimum: 10, maximum: 100}
   validates :description, presence: true, length: {minimum: 10}
   validates :publish_date, presence: true
+  mount_uploader :cover_image_name, BookUploader
 
   default_scope {order created_at: :desc}
 

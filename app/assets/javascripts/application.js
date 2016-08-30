@@ -17,4 +17,6 @@
 //= require bootstrap.min
 //= require star-rating.min
 //= require theme.min
+//= require fileinput.min
+//= require bootstrap-datetimepicker.min
 //= require_tree .

@@ -1,4 +1,6 @@
 en:
+  status: "The form contains"
+  error: "error"
   nav_example:
     audio_books: "Audiobooks"
     e_books: "e-books"
@@ -86,3 +88,13 @@ en:
     exists_user: "Not user"
     search_text: "search"
     bt_search: "Search"
+  admin:
+    books:
+      new:
+        title: "Create New Book"
+        submit: "Submit"
+        categories: "Categories"
+        authors: "Authors"
+        publishers: "Publishers"
+        languages: "Languages"
+
