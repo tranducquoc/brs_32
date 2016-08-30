@@ -1,8 +1,12 @@
-$(document).on("ready page:load", function(){
-  $(".star-rating").rating({
-    displayOnly: true,
-  });
+var flag = true;
+$(document).on('ready page:load', function(){
+  if(flag){
+    $('.star-rating').rating({
+      displayOnly: true,
+    });
+    flag = false;
+  }
 });
 function changeDataFilter(checkbox){
-  $(checkbox).closest("form").submit();
+  $(checkbox).closest('form').submit();
 }

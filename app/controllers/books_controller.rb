@@ -3,8 +3,11 @@ class BooksController < ApplicationController
 
   def index
     params[:books_filter] ||= Settings.books_filter[:category]
-    @books = Book.send(params[:books_filter], params[params[:books_filter]])
-      .paginate(page: params[:page], per_page: Settings.per_page)
+    @search = Book.send(params[:books_filter], params[params[:books_filter]])
+      .ransack(params[:q])
+    @books = @search.result
+      .joins(:category, :author, :publisher, :language)
+      .page(params[:page]).per(Settings.per_page)
     @categories = Category.all
     @authors = Author.all
     @languages = Language.all

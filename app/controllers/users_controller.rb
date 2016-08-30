@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.page(params[:page]).per(Settings.per_page)
-      .search(params[:search])
+      .has_name(params[:search])
   end
 
   private
