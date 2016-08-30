@@ -1,13 +1,14 @@
-User.create!(name: "quoc",
-             email: "quoc@gmail.com",
-             password: "123456",
-             password_confirmation: "123456")
+User.create!(name: "User",
+             email: "user@mail.com",
+             password: "111111",
+             password_confirmation: "111111")
 
-User.create!(name: "admin",
-             email: "admin@gmail.com",
-             password: "123456",
-             password_confirmation: "123456",
+User.create!(name: "Admin",
+             email: "admin@mail.com",
+             password: "111111",
+             password_confirmation: "111111",
              role: 0)
+
 Category.create!(name: "Information Technology")
 Category.create!(name: "Short Story")
 Category.create!(name: "Novel")
@@ -25,9 +26,11 @@ Language.create!(name: "Vietnamese")
 Publisher.create!(name: "B & W Publishing",
   address: "Chicago - USA",
   phone_number: "08-5656-56")
+
 Publisher.create!(name: "BBC Books",
   address: "New York - USA",
   phone_number: "08-2112-21")
+
 Publisher.create!(name: "Kim Dong",
   address: "Ho Chi Minh - VN",
   phone_number: "84-123456")

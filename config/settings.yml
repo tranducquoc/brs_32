@@ -3,3 +3,14 @@ books_per_row: 4
 books_filter: {category: "of_category", author: "of_author",
  publisher: "of_publisher", language: "of_language"}
 size_avatar: 50
+activity:
+  action_type:
+    follow_user: 0
+    followed_by_user: 1
+    mark_read: 2
+    mark_reading: 3
+    mark_favorite: 4
+    write_review: 5
+    write_comment: 6
+avatar:
+  size: 46

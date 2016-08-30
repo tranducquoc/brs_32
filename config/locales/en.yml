@@ -61,7 +61,6 @@ en:
     seesion:
       Signin: "Sign up"
       Login: "Log in"
-
   books:
     index:
       btn_search: "Search"
@@ -70,7 +69,17 @@ en:
       author: "Author"
       publisher: "Publisher"
       language: "Language"
-
+  activity:
+    title: "New activities"
+    time_ago: "%{time} ago"
+    content:
+      follow_user: "follows \"%{name}\""
+      followed_by_user: "is followed by \"%{name}\""
+      mark_read: "marked the book named \"%{name}\" as read"
+      mark_reading: "marked the book named \"%{name}\" as reading"
+      mark_favorite: "marked the book named \"%{name}\" as favorite"
+      write_review: "wrote a review to the book named \"%{name}\""
+      write_comment: "commented to a review in the book named\"%{name}\""
   users:
     page_title: "Framgia Book System"
     title: "All Users"
