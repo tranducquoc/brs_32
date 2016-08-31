@@ -4,4 +4,9 @@ class UserBook < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   validates :user, presence: true
   validates :book, presence: true
+
+  scope :favorited, -> do
+    where :is_favorite
+    order created_at: :desc
+  end
 end

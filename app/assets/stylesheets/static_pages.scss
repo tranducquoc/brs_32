@@ -184,7 +184,7 @@
     }
   }
 
-  .box-heading {
+  .box_heading {
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 36px;
     font-weight: normal;
@@ -196,10 +196,13 @@
     letter-spacing: 1px;
     background: url(bg_box_head_1.png) 46% top no-repeat;
     padding-top: 40px;
-    margin-top: -105px;
     margin-left: 80px;
     padding-right: 50px;
     text-transform: uppercase;
+  }
+
+  .activity_heading {
+    margin-top: -105px;
   }
 
   #activities_wrapper {

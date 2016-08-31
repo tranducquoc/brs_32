@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 toppad" >
+    <div class="col-md-8 col-md-offset-2 toppad" >
       <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title center"><%= @user.name %></h3>
@@ -33,7 +33,7 @@
               <%= t ".send_mail" %>
           <% end %>
           <span class="pull-right">
-            <% if @user.current_user? current_user %>
+            <% if @user.is_user? current_user %>
               <%= link_to edit_user_path(@user),
                 class: "btn btn-sm btn-warning" do %>
                 <i class="glyphicon glyphicon-edit"></i>
@@ -41,6 +41,28 @@
               <% end %>
             <% end %>
           </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="accordion" class="user_profile_accordion" role="tablist"
+  aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="box_heading">
+      <a data-toggle="collapse" data-parent="#accordion"
+        href="#tab_favorite_books" aria-expanded="true"
+        aria-controls="tab_favorite_books">
+        <%= t "users.favorite_book" %>
+      </a>
+    </div>
+    <div id="tab_favorite_books" class="panel-collapse collapse in"
+      role="tabpanel">
+      <div id="fav_books_list_wrapper">
+        <div id="fav_books_list">
+          <%= render partial: "book_item", collection: @favorite_books,
+            as: "user_book" %>
         </div>
       </div>
     </div>

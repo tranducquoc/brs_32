@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @favorite_books = @user.user_books.favorited
   end
 
   private

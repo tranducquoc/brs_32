@@ -11,6 +11,7 @@ module ApplicationHelper
   def increase_one index
     index + Settings.value_one
   end
+
   def gravatar_for user, options = {size: Settings.avatar.size,
     classes: "gravatar"}
     gravatar_id = Digest::MD5::hexdigest user&.email.downcase

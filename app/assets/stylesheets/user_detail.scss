@@ -1,0 +1,46 @@
+.container {
+  width: 1000px;
+}
+
+.user_profile_accordion {
+  .panel {
+    border: none;
+    background: transparent;
+
+    .box_heading > a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+#fav_books_list {
+  padding-left: 50px;
+  background: url(ui/bg_latest.png) left 185px repeat-y;
+  float: left;
+  width: 100%;
+
+  .book_item_wrapper {
+    float: left;
+    height: 215px;
+    width: 170px;
+    background: url("ui/bg_product.png") no-repeat scroll left top transparent;
+    margin-bottom: 72px;
+    margin-right: 10px;
+    min-height: 218px;
+    position: relative;
+    overflow: hidden;
+
+    .cover_image {
+      display: block;
+      margin-top: 4px;
+
+      a > img {
+        border: 0 solid #fff;
+        max-width: 100%;
+        height: 210px;
+        width: 142px;
+      }
+    }
+  }
+}
