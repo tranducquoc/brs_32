@@ -15,5 +15,6 @@ activity:
     write_comment: 6
 avatar:
   size: 46
+  large_size: 100
 role: {admin: "admin", user: "user"}
 default_sort: "created_at desc"

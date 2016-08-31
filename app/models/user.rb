@@ -21,4 +21,8 @@ class User < ActiveRecord::Base
   validates :name, presence: true, length: {maximum: 100}
   validates :password, presence: true, length: {minimum: 6}
   scope :has_name, ->(keyword) {where("name LIKE ?", "%#{keyword}%")}
+
+  def is_user? current_user
+    current_user == self
+  end
 end
