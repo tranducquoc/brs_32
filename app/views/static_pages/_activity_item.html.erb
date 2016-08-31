@@ -28,8 +28,18 @@
       <%= activity.activity_text %>
     </div>
   </div>
-  <div class="interaction_area">
-    <a class="glyphicon glyphicon glyphicon-thumbs-up"
-      aria-hidden="true"><b>+<%= activity.likes_count %></b></a>
+  <div class="interaction_area
+    <%= "liked" if activity.is_user_liked (current_user.id) %>">
+    <%= link_to likes_path,
+      data: {
+        activity_id: activity.id,
+        user_id: current_user.id
+      },
+      class: "glyphicon glyphicon glyphicon-thumbs-up btn_like" do %>
+        <b>+</b>
+        <b class="likes_count">
+          <%= activity.likes_count %>
+        </b>
+    <% end %>
   </div>
 </div>

@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "static_pages#home"
   resources :books
   resources :users
+  resources :likes, only: [:create, :edit]
 end

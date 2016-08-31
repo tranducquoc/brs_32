@@ -1,5 +1,6 @@
 class Activity < ActiveRecord::Base
   belongs_to :user
+  has_many :likes
   validates :user, presence: true
 
   scope :by_following_from, -> user_id do
@@ -16,7 +17,11 @@ class Activity < ActiveRecord::Base
   end
 
   def likes_count
-    Like.by_activity(id)&.size
+    likes&.size
+  end
+
+  def is_user_liked user_id
+    likes&.find_by user_id: user_id
   end
 
   def activity_text
