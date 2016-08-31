@@ -232,5 +232,83 @@ $color-red: #dd2231;
     text-shadow: 1px 1px #bbb3a5;
     font-size: 50px;
   }
+
+  .resize_image {
+    width: 80px;
+    height: 100px;
+  }
+
+  .font-size-20 {
+    font-size: 20px;
+  }
+
+  .book-table {
+    background-color: #3E2723;
+    color: #D7CCC8;
+  }
+
+  .book-table tr:hover {
+    background-color: #8D6E63;
+  }
+
+  .book-table thead {
+    background-color: #795548;
+    font-size: 15px;
+  }
+
+  .book-table thead, tr, td {
+    border-color: #795548 ;
+  }
+
+  .book-table {
+    border-color: #3E2723;
+  }
+
+  .book-table th {
+    border-color: #3E2723;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  .book-form-search .col-lg-3 {
+    padding: 0;
+    padding-right: 5px;
+  }
+
+  .book-form-search select {
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .book-form-search .col-lg-3 select {
+    width: 100%;
+  }
+
+  .book-form-search input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .books-btn-search {
+    background-color: #FF8F00;
+    border-color: #FF8F00;
+    color: white;
+    box-shadow: 0px 2px 5px black;
+  }
+
+  .books-btn-search:hover {
+    box-shadow : 0px 4px 5px black;
+  }
+
+  .width-5 {
+    width: 5%;
+  }
+
+  .width-10 {
+    width: 10%;
+  }
 }
 

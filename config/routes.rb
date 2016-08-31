@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :likes, only: [:create, :edit]
 
   namespace :admin do
-    root "books#new"
+    root "books#index"
     resources :books
   end
 
