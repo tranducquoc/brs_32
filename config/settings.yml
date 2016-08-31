@@ -14,3 +14,5 @@ activity:
     write_comment: 6
 avatar:
   size: 46
+role: {admin: "admin", user: "user"}
+

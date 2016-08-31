@@ -20,6 +20,7 @@ gem "sidekiq"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "ransack"
+gem "carrierwave"
 
 group :development, :test do
   gem "sqlite3",     "1.3.9"

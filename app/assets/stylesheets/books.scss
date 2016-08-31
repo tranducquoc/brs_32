@@ -5,59 +5,75 @@ $color-shadow: #888888;
 $color-green: #24b840;
 $color-red: #dd2231;
 #books {
+  padding-bottom: 50px;
   .menu-left {
     list-style: none;
     padding-left: 0px;
   }
+
   .menu-left li {
     border-bottom: 1px solid $border-color;
   }
+
   .menu-left li:hover {
     background-color: #3E2723;
   }
+
   .color-shadow {
     color: $color-shadow;
     font-size: 18px;
   }
+
   .menu-left-header {
     background-image: url("../assets/bg_box_head_1.png");
     background-size: 100% 100%;
     line-height: 80px;
   }
+
   .menu-left-header a {
     color: rgb(22, 20, 18);
     text-shadow: rgb(187, 179, 165) 1px 1px;
   }
+
   .menu-left-header:hover a {
     text-decoration: none;
     color: rgb(22, 20, 18);
     text-shadow: rgb(187, 179, 165) 1px 1px;
   }
+
   .text-center {
     text-align: center;
   }
+
   .margin-0 {
     margin: 0px;
   }
+
   .padding-0 {
     padding: 0px;
   }
+
   .padding-2 {
     padding: 2px;
   }
+
   .main-content {
     height: 500px;
   }
+
   .padding-top-20 {
     padding-top: 20px;
   }
+
   .div-search {
     background-color: #3E2723;
     padding: 10px;
   }
+
   .max-width {
     width: 100%;
   }
+
   .book-item {
     padding: 20px;
     border: 1px solid $border-color;
@@ -66,17 +82,21 @@ $color-red: #dd2231;
     padding: 5px;
     background-color: white;
   }
+
   .book-item-img {
     width: 100%;
     height: 60%;
   }
+
   .book-item-button {
     margin: 1px;
   }
+
   .book-item-list {
     list-style: none;
     padding: 0px;
   }
+
   .book-item-list li {
     display: inline-block;
     width: 31%;
@@ -89,14 +109,17 @@ $color-red: #dd2231;
     cursor: pointer;
     font-size: 20px;
   }
+
   .book-item-list li:hover {
     background-color: #ea7696;
     color: white;
     border-color: #c00;
   }
+
   .font-size-10 {
     font-size: 12px;
   }
+
   .book-item-price {
     padding: 8px;
     background-color: #c00;
@@ -105,6 +128,7 @@ $color-red: #dd2231;
     width: 60%;
     font-size: 15px;
   }
+
   .book-item-title {
     font-size: 14px;
     display: block;
@@ -116,12 +140,15 @@ $color-red: #dd2231;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .book-item-title:hover a {
     text-decoration: none;
   }
+
   .rating-md {
     font-size: 15px;
   }
+
   .show-one-line {
     font-size: 15px;
     display: block;
@@ -137,6 +164,7 @@ $color-red: #dd2231;
   .display-none {
     display: none;
   }
+
   .books-data-filter {
     display: block;
     font-weight: normal;
@@ -146,10 +174,63 @@ $color-red: #dd2231;
     padding: 5px;
     text-shadow: 1px 1px 1px #000;
   }
+
   .books-data-filter:hover {
     color: white;
   }
+
   .text-center {
     text-align: center;
   }
+
+  .padding-0 .col-lg-3 {
+    padding: 0px;
+    padding-left: 2px;
+  }
+
+  .padding-0 .col-lg-6 {
+    padding: 0px;
+    padding-left: 2px;
+  }
+
+  .padding-top-50 {
+    padding-top: 50px;
+  }
+
+  .margin-top-100 {
+    margin-top: 100px;
+  }
+
+  .padding-20 {
+    padding: 20px;
+  }
+
+  .box-shadow {
+    box-shadow: 0px 3px 5px black;
+  }
+
+  #error_explanation ul {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    border-radius: 5px;
+  }
+
+  #new_book {
+    label {
+      font-weight: normal;
+      font-size: 25px;
+      font-family:  "PT Sans Narrow", sans-serif;
+      color: #161412;
+      text-shadow: 1px 1px #bbb3a5;
+    }
+  }
+
+  .title-function {
+    font-family:  "PT Sans Narrow", sans-serif;
+    color: #161412;
+    text-shadow: 1px 1px #bbb3a5;
+    font-size: 50px;
+  }
 }
+
