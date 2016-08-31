@@ -1,6 +1,6 @@
 class Admin::BooksController < ApplicationController
   before_action :verify_admin
-  before_action :load_books_association, only: :new
+  before_action :load_books_association, only: [:new, :edit]
 
   def index
     @search = Book.ransack params[:q]
@@ -23,6 +23,21 @@ class Admin::BooksController < ApplicationController
     else
       load_books_association
       render :new
+    end
+  end
+
+  def edit
+    @book = Book.find_by id: params[:id]
+  end
+
+  def update
+    @book = Book.find_by id: params[:id]
+    if @book.update(book_params)
+      flash[:success] = I18n.t "admin.books.edit.success"
+      redirect_to admin_root_path
+    else
+      flash[:danger] = I18n.t "admin.books.edit.failed"
+      render :edit
     end
   end
 

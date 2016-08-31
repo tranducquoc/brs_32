@@ -108,5 +108,9 @@ en:
         authors: "Authors"
         publishers: "Publishers"
         languages: "Languages"
+      edit:
+        title: "Edit Book"
+        success: "Edit book success !"
+        failed: "Edit book failed !"
 
 
