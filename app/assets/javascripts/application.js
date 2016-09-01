@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require turbolinks
 //= require bootstrap.min
 //= require star-rating.min
@@ -20,3 +19,7 @@
 //= require fileinput.min
 //= require bootstrap-datetimepicker.min
 //= require_tree .
+
+$(function () {
+  $('.dropdown-toggle').dropdown();
+});

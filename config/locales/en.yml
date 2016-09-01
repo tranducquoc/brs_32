@@ -21,7 +21,7 @@ en:
       sign_up: "Sign up"
       sign_in: "Sign in"
       sign_out: "Sign out"
-      profile: "Profile"
+      profile: "Edit profile"
     confirmation:
       confirmation_title: "Resend confirmation instructions"
       confirmation_btn: "Resend confirmation instructions"
@@ -112,5 +112,11 @@ en:
         title: "Edit Book"
         success: "Edit book success !"
         failed: "Edit book failed !"
-
-
+    not_found: "The user you're looking for is not found!"
+    show:
+      send_mail: "Send mail"
+      edit_button: "Edit info"
+      created_date: "Created date"
+      email: "Email"
+  datetime_format:
+    date_and_time: "%Y/%b/%d %H:%M"
