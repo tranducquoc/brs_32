@@ -2,6 +2,16 @@ class Admin::BooksController < ApplicationController
   before_action :verify_admin
   before_action :load_books_association, only: :new
 
+  def index
+    @search = Book.ransack params[:q]
+    @search.sorts = Settings.default_sort if @search.sorts.empty?
+    @books = @search.result
+      .joins(:category, :author, :publisher, :language)
+      .page(params[:page]).per(Settings.per_page)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
+  end
+
   def new
     @book = Book.new
   end

@@ -90,6 +90,17 @@ en:
     bt_search: "Search"
   admin:
     books:
+      index:
+        title: "Framgia Book List"
+        btn_add_book: "Add Book"
+        numbers: "Numbers"
+        cover_image: "Cover Image"
+        title: "Title"
+        is_in_library: "Is In Library"
+        created_at: "Created At"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Are you sure to delete it ?"
       new:
         title: "Create New Book"
         submit: "Submit"
@@ -97,4 +108,5 @@ en:
         authors: "Authors"
         publishers: "Publishers"
         languages: "Languages"
+
 
