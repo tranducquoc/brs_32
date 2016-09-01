@@ -21,3 +21,5 @@ default_sort: "created_at desc"
 user_book_status:
   reading: 0
   read: 1
+requests:
+  status: {waiting: "waiting", approved: "approved", rejected: "rejected"}

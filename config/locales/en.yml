@@ -131,6 +131,15 @@ en:
       destroy:
         success: "Book is deleted success!"
         failed: "Has error when try to deleted this book!"
+    requests:
+      index:
+        title: "Framgia Request List"
+        user: "Username"
+        book: "Book title"
+        status: "Status"
+        created_at: "Created at"
+        approve: "Approve"
+        reject: "Reject"
     not_found: "The user you're looking for is not found!"
     show:
       send_mail: "Send mail"
