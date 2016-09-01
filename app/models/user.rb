@@ -23,10 +23,14 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: {minimum: 6}
   scope :has_name, ->(keyword) {where("name LIKE ?", "%#{keyword}%")}
 
-
   def is_user? current_user
     current_user == self
   end
+
+  def is_admin?
+    role == Settings.role[:admin]
+  end
+
   class << self
     def from_omniauth auth
       where(provider: auth.provider, uid: auth.id).first_or_create do |user|

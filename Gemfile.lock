@@ -40,6 +40,9 @@ GEM
     bcrypt (3.1.7)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
+    bootstrap-glyphicons (0.0.1)
+      railties (>= 3.0)
+      sass (>= 3.2)
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
@@ -252,6 +255,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.7)
+  bootstrap-glyphicons
   bootstrap-kaminari-views
   bootstrap-sass (= 3.2.0.0)
   byebug (= 3.4.0)

@@ -20,9 +20,8 @@ class UserBook < ActiveRecord::Base
   after_update :update_book
 
   def average_rating user_rating
-    total_rating = self.book.user_books.count
-    book_average_rating =
-      (self.book.average_rating * total_rating + user_rating.to_f)/(total_rating+1)
+    total_rating = self.book.user_books.count + 1
+    (self.book.average_rating * total_rating + user_rating.to_f)/total_rating
   end
 
   private
