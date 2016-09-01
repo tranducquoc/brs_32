@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <% @user_books.each do |user_book|%>
+    <div class="panel-heading">
+       <h3><%= user_book.user.name %></h3>
+    </div>
+    <div class="panel-body">
+      <div><%= user_book.review %></div>
+    </div>
+  <% end %>
+</div>
