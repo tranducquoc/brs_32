@@ -8,6 +8,17 @@ User.create!(name: "Admin",
              password: "111111",
              password_confirmation: "111111",
              role: 0)
+User.create!(name: "faker1",
+             email: "faker1@mail.com",
+             password: "123456",
+             password_confirmation: "123456",
+            )
+
+User.create!(name: "faker2",
+             email: "faker2@mail.com",
+             password: "123456",
+             password_confirmation: "123456",
+            )
 
 Category.create!(name: "Information Technology")
 Category.create!(name: "Short Story")
@@ -37,7 +48,7 @@ Publisher.create!(name: "Kim Dong",
 
 Book.create!(
     title: "Think and Grow Rich",
-    cover_image_name: "book1.jpg",
+    cover_image_name: "734_Think-and-grow-rich.jpg",
     number_of_pages: 200,
     description: "Think And Grow Rich has earned itself the reputation of being considered a textbook for actionable techniques that can help one get better at doing anything, not just by rich and wealthy, but also by people doing wonderful work in their respective fields.",
     publish_date: DateTime.strptime("28/08/2016", "%d/%m/%y"),
@@ -63,4 +74,36 @@ Book.create!(
     language_id: 1,
     is_in_library: true,
     average_rating: 5.0,
+  )
+Book.create!(
+    title: "Truyen Kieu",
+    cover_image_name: "truyen_kieu.jpg",
+    number_of_pages: 2000,
+    description: "Truyện Kiều, tên gốc là Đoạn trường tân thanh, là truyện thơ kinh điển trong Nền Văn học Việt Nam, được viết bằng chữ Nôm theo thể lục bát của Nguyễn Du, gồm 3254 câu, dựa theo tiểu thuyết  Kim Vân Kiều truyện của Thanh Tâm Tài Nhân",
+    publish_date: DateTime.strptime("31/08/2016", "%d/%m/%y"),
+    price: 500.000,
+    author_id: 4,
+    category_id: 2,
+    publisher_id: 3,
+    language_id: 2,
+    is_in_library: false,
+    average_rating: 5.0
+  )
+
+Request.create!(
+    user_id: 1,
+    book_id: 3,
+    status: 0
+  )
+
+Request.create!(
+    user_id: 3,
+    book_id: 3,
+    status: 1
+  )
+
+Request.create!(
+    user_id: 4,
+    book_id: 3,
+    status: 2
   )
