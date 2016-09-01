@@ -89,6 +89,7 @@ en:
     search_text: "search"
     bt_search: "Search"
     favorite_book: "Favorite books"
+    reading_history: "Reading history"
   admin:
     books:
       index:
