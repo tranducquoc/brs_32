@@ -71,6 +71,19 @@ en:
       author: "Author"
       publisher: "Publisher"
       language: "Language"
+    book_infomation:
+      not_found: "Not found book"
+      description: "Description"
+      review: "Review"
+      write_review: "Write a review"
+      your_review: "Your Review:"
+      name: "Your Name:"
+      rate: "Rating:"
+      bad: "Bad"
+      good: "Good"
+      continue: "Continue"
+      reviews: "reviews"
+      comment: "Comment"
   activity:
     title: "New activities"
     time_ago: "%{time} ago"
@@ -82,6 +95,7 @@ en:
       mark_favorite: "marked the book named \"%{name}\" as favorite"
       write_review: "wrote a review to the book named \"%{name}\""
       write_comment: "commented to a review in the book named\"%{name}\""
+
   users:
     page_title: "Framgia Book System"
     title: "All Users"
