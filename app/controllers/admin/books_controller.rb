@@ -1,4 +1,5 @@
 class Admin::BooksController < ApplicationController
+  before_action :authenticate_user!
   before_action :verify_admin
   before_action :load_books_association, only: [:new, :edit]
 
@@ -39,6 +40,16 @@ class Admin::BooksController < ApplicationController
       flash[:danger] = I18n.t "admin.books.edit.failed"
       render :edit
     end
+  end
+
+  def destroy
+    @book = Book.find_by id: params[:id]
+    if @book.destroy
+      flash[:success] = I18n.t "admin.books.destroy.success"
+    else
+      flash[:danger] = I18n.t "admin.books.destroy.failed"
+    end
+    redirect_to admin_books_path
   end
 
   private

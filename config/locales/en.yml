@@ -128,6 +128,9 @@ en:
         title: "Edit Book"
         success: "Edit book success !"
         failed: "Edit book failed !"
+      destroy:
+        success: "Book is deleted success!"
+        failed: "Has error when try to deleted this book!"
     not_found: "The user you're looking for is not found!"
     show:
       send_mail: "Send mail"
