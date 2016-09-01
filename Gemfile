@@ -21,6 +21,9 @@ gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "ransack"
 gem "carrierwave"
+gem "omniauth-twitter"
+gem "omniauth-facebook"
+gem "figaro"
 
 group :development, :test do
   gem "sqlite3",     "1.3.9"

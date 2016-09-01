@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable, omniauth_providers: [:facebook]
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   has_many :activities, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -22,7 +23,26 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: {minimum: 6}
   scope :has_name, ->(keyword) {where("name LIKE ?", "%#{keyword}%")}
 
+
   def is_user? current_user
     current_user == self
+  end
+  class << self
+    def from_omniauth auth
+      where(provider: auth.provider, uid: auth.id).first_or_create do |user|
+        user.name = auth.info.name
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0, 20]
+      end
+    end
+
+    def new_with_session params, session
+      super.tap do |user|
+        if data = session["devise.facebook_data"] &&
+            session["devise.facebook_data"]["extra"]["raw_info"]
+          user.email = data["email"] if user.email.blank?
+        end
+      end
+    end
   end
 end
