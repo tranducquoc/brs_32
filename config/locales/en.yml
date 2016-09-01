@@ -88,6 +88,7 @@ en:
     exists_user: "Not user"
     search_text: "search"
     bt_search: "Search"
+    favorite_book: "Favorite books"
   admin:
     books:
       index:
