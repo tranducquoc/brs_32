@@ -9,7 +9,13 @@
 
     .box_heading > a {
       text-decoration: none;
+      color: #f0f8ff;
+      text-shadow: 1px 1px #ffa200;
+    }
+
+    .box_heading > a.collapsed {
       color: inherit;
+      text-shadow: inherit;
     }
   }
 }

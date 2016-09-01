@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @favorite_books = @user.user_books.favorited
+    @reading_history_books = @user.user_books.reading_history
   end
 
   private

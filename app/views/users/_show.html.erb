@@ -67,4 +67,22 @@
       </div>
     </div>
   </div>
+  <div class="panel panel-default">
+    <div class="box_heading">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+        href="#tab_reading_history" aria-expanded="false"
+        aria-controls="tab_reading_history">
+        <%= t "users.reading_history" %>
+      </a>
+    </div>
+    <div id="tab_reading_history" class="panel-collapse collapse"
+      role="tabpanel">
+      <div id="fav_books_list_wrapper">
+        <div id="fav_books_list">
+          <%= render partial: "book_item", collection: @reading_history_books,
+            as: "user_book" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -6,8 +6,13 @@ class UserBook < ActiveRecord::Base
   validates :book, presence: true
 
   scope :favorited, -> do
-    where :is_favorite
-    order created_at: :desc
+    where is_favorite: true
+  end
+
+  scope :reading_history, -> do
+    read_reading_status = "#{Settings.user_book_status.reading},
+      #{Settings.user_book_status.read}"
+    where "status IN (#{read_reading_status})"
   end
 
   scope :current_user_rating, -> user {find_by user_id: user.id}
