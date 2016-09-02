@@ -7,6 +7,17 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless current_user.role == Settings.role[:admin]
   end
 
+  def after_sign_in_path_for resource
+    if resource.is_a? User
+      if resource.role == Settings.role[:admin]
+        admin_root_path
+      else
+        root_path
+      end
+    else
+    end
+  end
+
   protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
