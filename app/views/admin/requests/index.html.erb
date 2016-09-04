@@ -50,7 +50,7 @@
               <td><%= increase_one index %></td>
               <td><%= request.user.name %></td>
               <td><%= request.book.title %></td>
-              <td class="text-center">
+              <td class="text-center status">
                 <% if request.status == Settings.requests.status[:waiting] %>
                   <span class="btn btn-warning width-80">
                     <%= request.status %>
@@ -68,10 +68,12 @@
               <td><%= request.created_at %></td>
               <td class="text-center">
                 <%= button_tag t("admin.requests.index.approve"),
+                  onClick: "updateStatusRequest(this, #{request.id})",
                   class: "btn btn-success width-80" %>
               </td class="text-center">
               <td>
                 <%= button_tag t("admin.requests.index.reject"),
+                  onClick: "updateStatusRequest(this, #{request.id})",
                   class: "btn btn-danger width-80" %>
               </td>
             </tr>

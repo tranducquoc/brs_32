@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
         root_path
       end
     else
+      redirect_to new_user_session_path
     end
   end
 
