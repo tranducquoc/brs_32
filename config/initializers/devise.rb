@@ -275,4 +275,10 @@ Devise.setup do |config|
     ENV["FACEBOOK_SECRET_KEY"],
     scope: "email, public_profile,user_birthday,user_education_history,
       user_hometown,user_location,user_work_history", info_fields: "email, name"
+
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"],
+                  ENV["GOOGLE_SECRET"],
+                  scope: "email,profile,offline",
+                  prompt: "consent",
+                  setup: true
 end

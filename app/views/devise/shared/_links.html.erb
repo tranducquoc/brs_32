@@ -25,8 +25,11 @@
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
       <%= link_to omniauth_authorize_path(resource_name, provider) do %>
-        <%= button_tag "", class: "btn-facebook" %>
+        <%= button_tag "", class: "btn_social btn_facebook" %>
       <% end %>
     <br />
   <% end -%>
+  <%= link_to user_google_oauth2_omniauth_authorize_path do %>
+    <%= button_tag "", class: "btn_social btn_google" %>
+  <% end %>
 <% end -%>

@@ -318,11 +318,22 @@
   }
 }
 
-.btn-facebook {
-  background-image: url("facebook-login-blue.png");
+.btn_social {
   background-size: 100% 100%;
   width: 150px;
   height: 50px;
   background-color: transparent;
   border: none;
+}
+
+.btn_facebook {
+  background-image: url("facebook-login-blue.png");
+}
+
+.btn_google {
+  background-image: url("google-login.png");
+}
+
+.btn_twitter {
+  background-image: url("twitter-login.png");
 }
