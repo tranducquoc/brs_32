@@ -3,7 +3,7 @@ class CreateRequests < ActiveRecord::Migration
     create_table :requests do |t|
       t.references :user, index: true, foreign_key: true
       t.references :book, index: true, foreign_key: true
-      t.integer :status
+      t.integer :status, default: 0
 
       t.timestamps null: false
     end

@@ -84,6 +84,11 @@ en:
       continue: "Continue"
       reviews: "reviews"
       comment: "Comment"
+    show:
+      price: "Price"
+      request_to_buy: "Request to buy"
+      has_requested: "(You has requested)"
+      request_failed: "(Your request has error)"
   activity:
     title: "New activities"
     time_ago: "%{time} ago"
