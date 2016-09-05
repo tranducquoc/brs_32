@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "books#index"
     resources :books
-    resources :requests, only: [:index]
+    resources :requests, only: [:index, :update]
   end
   resources :user_books
 end
