@@ -165,6 +165,24 @@ en:
           success_create: "You have successfully created a new author!"
       form:
         submit_button: "Submit"
+    authors:
+      new:
+        title: "New author"
+        flash:
+          error_create: "Errors occured while creating new author, please try
+           again!"
+          success_create: "You have successfully created a new author!"
+      form:
+        submit_button: "Submit"
+    publishers:
+      new:
+        title: "New publisher"
+        flash:
+          error_create: "Errors occured while creating new publisher, please try
+           again!"
+          success_create: "You have successfully created a new publisher!"
+      form:
+        submit_button: "Submit"
     not_found: "The user you're looking for is not found!"
     show:
       send_mail: "Send mail"

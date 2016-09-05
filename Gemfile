@@ -26,6 +26,7 @@ gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 gem "figaro"
 gem "bootstrap-glyphicons"
+gem "simple_form"
 gem "friendly_id", "~> 5.1.0"
 
 group :development, :test do
