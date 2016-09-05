@@ -6,5 +6,9 @@
     <div class="panel-body">
       <div><%= user_book.review %></div>
     </div>
+    <ol class="comments">
+      <%= render user_book.comments %>
+    </ol>
+    <%= render "shared/comment_form", user_book: user_book %>
   <% end %>
 </div>

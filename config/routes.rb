@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     resources :requests, only: [:index, :update]
   end
   resources :user_books
+  resources :comments
 end
