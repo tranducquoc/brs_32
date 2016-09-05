@@ -39,16 +39,34 @@
                   <div class="col-lg-12 padding-2">
                     <ul class="book-item-list">
                       <li <%= "class=favorited" if book
-                        .is_favorite_of_user current_user %>>
+                        .is_favorite_of_user? current_user %>>
                         <i class="glyphicon glyphicon-heart btn_favorite"
                           href="<%= user_books_path %>"
                           data-user-id="<%= current_user.id %>"
                           data-book-id="<%= book.id %>"
                           data-is-favorite="<%= book
-                            .is_favorite_of_user current_user %>"></i>
+                            .is_favorite_of_user? current_user %>"></i>
                       </li>
-                      <li><i class="glyphicon glyphicon-eye-open"></i></li>
-                      <li><i class="glyphicon glyphicon-check"></i></li>
+                      <li <%= "class=reading" if book
+                        .is_reading_of_user? current_user %>>
+                        <i class="glyphicon glyphicon-eye-open btn_reading"
+                          href="<%= user_books_path %>"
+                          data-user-id="<%= current_user.id %>"
+                          data-book-id="<%= book.id %>"
+                          data-next-status="<%=
+                            book.next_status_of_user current_user,
+                              Settings.user_book_status.reading %>"></i>
+                      </li>
+                      <li <%= "class=read" if book
+                        .is_read_of_user? current_user %>>
+                        <i class="glyphicon glyphicon-check btn_read"
+                          href="<%= user_books_path %>"
+                          data-user-id="<%= current_user.id %>"
+                          data-book-id="<%= book.id %>"
+                          data-next-status="<%=
+                            book.next_status_of_user current_user,
+                              Settings.user_book_status.read %>"></i>
+                      </li>
                     </ul>
                   </div>
                   <div class="col-lg-12 padding-2">

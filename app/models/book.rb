@@ -29,7 +29,25 @@ class Book < ActiveRecord::Base
     where language_id: language_id if language_id.present?
   end
 
-  def is_favorite_of_user user
+  def is_favorite_of_user? user
     user.user_books.favorited&.map(&:book_id)&.include? id
+  end
+
+  def is_reading_of_user? user
+    user.user_books.by_book_id(id).status == Settings.user_book_status.reading
+  end
+
+  def is_read_of_user? user
+    user.user_books.by_book_id(id).status == Settings.user_book_status.read
+  end
+
+  def next_status_of_user user, target_status
+    source_status = user.user_books.by_book_id(id).status
+
+    if source_status == target_status
+      Settings.user_book_status.no_status
+    else
+      target_status
+    end
   end
 end
