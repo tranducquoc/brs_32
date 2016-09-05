@@ -19,7 +19,8 @@ avatar:
 role: {admin: "admin", user: "user"}
 default_sort: "created_at desc"
 user_book_status:
-  reading: 0
-  read: 1
+  no_status: 0
+  reading: 1
+  read: 2
 requests:
   status: {waiting: "waiting", approved: "approved", rejected: "rejected"}
