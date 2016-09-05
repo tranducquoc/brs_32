@@ -1,0 +1,15 @@
+<li id="comment-<%= comment.id %>">
+  <%= link_to gravatar_for(comment.user, size: 50), comment.user %>
+  <span class="content">
+    <%= comment.content %>
+  </span>
+  <span class="timestamp">
+    <%= t "comment.post" %>
+    <%= time_ago_in_words comment.created_at %>
+    <%= t "comment.ago" %>
+    <% if comment.user.is_user? current_user %>
+      <%= link_to t("comment.delete"), comment, method: :delete,
+        data: {confirm: t("comment.confirm")} %>
+      <% end %>
+ </span>
+</li>

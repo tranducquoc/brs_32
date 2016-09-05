@@ -10,7 +10,7 @@ class UserBook < ActiveRecord::Base
     order created_at: :desc
   end
 
-  scope :current_user_rating, -> user {find_by user_id: user.id}
+  scope :current_user_rating, -> user_id {find_by user_id: user_id}
 
   after_update :update_book
 

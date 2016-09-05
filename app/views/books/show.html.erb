@@ -28,7 +28,7 @@
     <div class="col-lg-12 padding-2">
       <input type="text" class="rating-loading" id="book-rating" data-min="0"
         data-max="5" data-user-id="<%= current_user.id %>"
-        data-book-id="<%= @book.id %>" data-step="0.5" value="<%= @book.user_books.current_user_rating(current_user).rating %>">
+        data-book-id="<%= @book.id %>" data-step="0.5" value="<%= @book.user_books.current_user_rating(current_user.id).rating %>">
     </div>
     <div class="col-lg-12 padding-2">
       <%= link_to t("books.book_infomation.reviews"), user_book_path(@book) %>
