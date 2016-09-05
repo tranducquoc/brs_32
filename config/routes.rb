@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   root "static_pages#home"
   resources :books
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     resources :authors, only: [:index, :new, :create]
     resources :publishers, only: [:index, :new, :create]
     resources :languages, only: [:index, :new, :create]
+    resources :categories, only: [:index, :new, :create]
   end
   resources :user_books
   resources :comments
