@@ -1,7 +1,7 @@
 function userRequest(user_id, book_id, message_success, message_failed){
   $.ajax({
     type: 'post',
-    url: '/requests',
+    url: '/users/' + user_id + '/requests',
     dataType: 'json',
     data: {
       request: {

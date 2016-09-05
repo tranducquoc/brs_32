@@ -67,7 +67,9 @@ en:
       success: "success"
   books:
     index:
+      title: "All Books"
       btn_search: "Search"
+      btn_request: "Request by book"
     menu_left:
       category: "Category"
       author: "Author"
@@ -91,6 +93,19 @@ en:
       request_to_buy: "Request to buy"
       has_requested: "(You has requested)"
       request_failed: "(Your request has error)"
+  requests:
+    index:
+      title: "Request Buy Book"
+      btn_search: "Search"
+      numbers: "Numbers"
+      user_name: "Username"
+      book_title: "Book Title"
+      created_at: "Created_at"
+      status: "Status"
+      cancel: "Cancel"
+      confirm_delete: "Are you sure to delete it ?"
+      destroy_success: "Request has been cancel"
+      destroy_failed: "Has error when you try cancel request"
   activity:
     title: "New activities"
     time_ago: "%{time} ago"
