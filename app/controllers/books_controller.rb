@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  load_and_authorize_resource find_by: :slug
+
   before_action :authenticate_user!
   before_action :load_book, only: :show
 

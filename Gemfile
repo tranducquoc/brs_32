@@ -25,6 +25,7 @@ gem "omniauth-twitter"
 gem "omniauth-facebook"
 gem "figaro"
 gem "bootstrap-glyphicons"
+gem "friendly_id", "~> 5.1.0"
 
 group :development, :test do
   gem "sqlite3",     "1.3.9"
