@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
     role == Settings.role[:admin]
   end
 
+  def has_requested book_id
+    !self.requests.find_by(book_id: book_id).nil?
+  end
+
   class << self
     def from_omniauth auth
       where(provider: auth.provider, uid: auth.id).first_or_create do |user|

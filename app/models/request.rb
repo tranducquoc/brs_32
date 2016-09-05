@@ -4,4 +4,5 @@ class Request < ActiveRecord::Base
   validates :user, presence: true
   validates :book, presence: true
   enum status: {waiting: 0, approved: 1, rejected: 2}
+
 end
