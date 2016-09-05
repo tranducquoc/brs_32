@@ -18,6 +18,7 @@
 //= require theme.min
 //= require fileinput.min
 //= require bootstrap-datetimepicker.min
+//= require social-share-button
 //= require_tree .
 
 $(function () {
