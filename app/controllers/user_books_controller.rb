@@ -17,27 +17,45 @@ class UserBooksController < ApplicationController
   end
 
   def update
-    @user_books = @book.user_books.find_by(user_id: params[:user_id])
-    if @user_books.update_attribute(:rating, params[:rating])
-      book_average_rating = @user_books.average_rating params[:rating]
+    user_book = @book.user_books.find_by(user_id: user_book_params[:user_id],
+                                         book_id: user_book_params[:book_id])
+    user_book ||= @book.user_books.new user_id: user_book_params[:user_id]
+
+    if user_book.update_attributes user_book_params
+      json_response = {
+        success: true
+      }
+
+      if user_book_params[:is_favorite]
+        json_response[:is_favorite] = user_book_params[:is_favorite] == "true"
+      end
+
+      if user_book_params[:rating]
+        json_response[:book_average_rating] = user_book
+          .average_rating user_book_params[:rating]
+      end
+
       respond_to do |format|
         format.json do
-          render json: {
-            success: "success",
-            book_average_rating: book_average_rating
-          }
+          render json: json_response
         end
       end
     else
-      format.json do
-        render json: {
-          fail: "fail"
-        }
+      respond_to do |format|
+        format.json do
+          render json: {
+            success: false
+          }
+        end
       end
     end
   end
 
   private
+  def user_book_params
+    params.require(:user_book).permit :user_id, :book_id, :status,
+                                      :is_favorite, :rating, :review
+  end
 
   def load_book
     @book = Book.find_by id: params[:id]

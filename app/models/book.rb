@@ -28,4 +28,8 @@ class Book < ActiveRecord::Base
   scope :of_language, -> language_id do
     where language_id: language_id if language_id.present?
   end
+
+  def is_favorite_of_user user
+    user.user_books.favorited&.map(&:book_id)&.include? id
+  end
 end
