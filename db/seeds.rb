@@ -3,11 +3,6 @@ User.create!(name: "User",
              password: "111111",
              password_confirmation: "111111")
 
-User.create!(name: "Admin",
-             email: "admin@mail.com",
-             password: "111111",
-             password_confirmation: "111111",
-             role: 0)
 User.create!(name: "faker1",
              email: "faker1@mail.com",
              password: "123456",
@@ -97,13 +92,13 @@ Request.create!(
   )
 
 Request.create!(
-    user_id: 3,
+    user_id: 2,
     book_id: 3,
     status: 1
   )
 
 Request.create!(
-    user_id: 4,
+    user_id: 3,
     book_id: 3,
     status: 2
   )

@@ -1,10 +1,35 @@
 <%= provide :title, t("admin.requests.index.title") %>
 <div id="books">
   <div class="row padding-top-50">
-      <div class="col-lg-12 book-form-search">
-
-      </div>
+    <div class="col-lg-12 book-form-search">
+      <%= search_form_for @search, url: admin_requests_path do |f| %>
+        <%= f.condition_fields do |condition| %>
+          <div class="col-lg-3">
+            <%= condition.attribute_fields do |attribute| %>
+              <%= attribute.attribute_select associations: [:user, :book] %>
+            <% end %>
+          </div>
+          <div class="col-lg-3">
+            <%= condition.predicate_select %>
+          </div>
+          <div class="col-lg-3">
+            <%= condition.value_fields do |value| %>
+              <%= value.text_field :value %>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="col-lg-3">
+          <%= f.submit t("admin.search"),
+            class: "btn btn-default books-btn-search" %>
+        </div>
+        <div class="col-lg-12 padding-0">
+          <%= f.sort_fields do |sort| %>
+            <%= sort.sort_select %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
+  </div>
   <div class="row padding-top-50">
     <div class="col-lg-12">
       <table class="table table-bordered book-table">

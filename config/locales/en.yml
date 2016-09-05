@@ -105,6 +105,7 @@ en:
     favorite_book: "Favorite books"
     reading_history: "Reading history"
   admin:
+    search: "Search"
     books:
       index:
         title: "Framgia Book List"
