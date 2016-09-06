@@ -127,6 +127,10 @@ $color-red: #dd2231;
     font-size: 12px;
   }
 
+  .font-size-15 {
+    font-size: 15px
+  }
+
   .book-item-price {
     padding: 8px;
     background-color: #c00;
@@ -347,6 +351,10 @@ $color-red: #dd2231;
 
   .book-show-title {
     font-size: 30px;
+  }
+
+  .rating-xs {
+    font-size: 15px;
   }
 }
 

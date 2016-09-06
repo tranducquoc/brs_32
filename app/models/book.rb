@@ -37,16 +37,29 @@ class Book < ActiveRecord::Base
   end
 
   def is_reading_of_user? user
-    user.user_books.by_book_id(id).status == Settings.user_book_status.reading
+    if user.user_books.find_by(book_id: id).nil?
+      false
+    else
+      user.user_books.by_book_id(id).status == Settings.user_book_status.reading
+    end
+
   end
 
   def is_read_of_user? user
-    user.user_books.by_book_id(id).status == Settings.user_book_status.read
+    if user.user_books.find_by(book_id: id).nil?
+      false
+    else
+      user.user_books.by_book_id(id).status == Settings.user_book_status.read
+    end
+
   end
 
   def next_status_of_user user, target_status
-    source_status = user.user_books.by_book_id(id).status
-
+    if user.user_books.find_by(book_id: id).nil?
+      source_status = nil
+    else
+      source_status = user.user_books.by_book_id(id).status
+    end
     if source_status == target_status
       Settings.user_book_status.no_status
     else
