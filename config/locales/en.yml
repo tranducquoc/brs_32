@@ -264,3 +264,12 @@ en:
       email: "Email"
   datetime_format:
     date_and_time: "%Y/%b/%d %H:%M"
+  follow:
+    follow_title: "Follow user"
+    following: "following"
+    followers: "followers"
+    button_follow: "Follow"
+    button_unfollow: "UnFolow"
+    view_profile: "View my profile"
+    not_user: "Not found user"
+    relationship: "Relationship"

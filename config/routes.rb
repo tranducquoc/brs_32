@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :books
   resources :users do
     resources :requests, only: [:index, :new, :create, :destroy]
+    resources :relationships, only: [:create, :destroy, :index]
   end
   resources :likes, only: [:create, :edit]
   namespace :admin do

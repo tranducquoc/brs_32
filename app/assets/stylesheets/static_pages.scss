@@ -332,9 +332,60 @@
 
 .btn_google {
   background-image: url("google-login.png");
-
 }
 
 .btn_twitter {
   background-image: url("twitter-login.png");
+}
+
+/*follow user*/
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  font-size: 15px !important;
+  a {
+      float: left;
+      padding: 0 10px;
+      color: black;
+      &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+#follow_form {
+  margin-right: 15px;
+  color: black;
+  float: left;
+}
+
+#search{
+  width: 250px;
+  height: 40px !important;
+}
+#bt_search{
+  width: 80px;
+  height: 40px !important;
 }
