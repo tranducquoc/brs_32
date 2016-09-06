@@ -281,4 +281,5 @@ Devise.setup do |config|
                   scope: "email,profile,offline",
                   prompt: "consent",
                   setup: true
+  config.omniauth :twitter, ENV["TWITTER_KEY"], ENV["TWITTER_SECRET"]
 end
