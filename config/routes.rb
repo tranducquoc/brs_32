@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :books
     resources :requests, only: [:index, :update]
     resources :authors, only: [:index, :new, :create]
+    resources :publishers, only: [:index, :new, :create]
   end
   resources :user_books
   resources :comments
