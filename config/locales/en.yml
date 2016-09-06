@@ -185,6 +185,12 @@ en:
           success_create: "You have successfully created a new publisher!"
       form:
         submit_button: "Submit"
+    categories:
+      new:
+        title: "New Categories"
+        submit: "Submit"
+        create_success: "Create category success"
+        create_failed: "Has error when create new category"
     not_found: "The user you're looking for is not found!"
     show:
       send_mail: "Send mail"
