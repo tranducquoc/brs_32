@@ -63,6 +63,8 @@ en:
     seesion:
       Signin: "Sign up"
       Login: "Log in"
+    omniauth_callbacks:
+      success: "success"
   books:
     index:
       btn_search: "Search"
