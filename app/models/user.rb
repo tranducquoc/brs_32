@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
-  devise :omniauthable, omniauth_providers: [:facebook]
+  devise :omniauthable, omniauth_providers: [:facebook,:google_oauth2,:twitter]
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   has_many :activities, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -47,7 +48,7 @@ class User < ActiveRecord::Base
     def new_with_session params, session
       super.tap do |user|
         if data = session["devise.facebook_data"] &&
-            session["devise.facebook_data"]["extra"]["raw_info"]
+          session["devise.facebook_data"]["extra"]["raw_info"]
           user.email = data["email"] if user.email.blank?
         end
       end
