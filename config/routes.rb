@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :books
   resources :users do
     resources :requests, only: [:index, :new, :create, :destroy]
-    resources :relationships, only: [:create, :destroy, :index]
+    resources :relationships, only: [:index]
   end
   resources :likes, only: [:create, :edit]
   namespace :admin do
@@ -14,8 +14,9 @@ Rails.application.routes.draw do
     resources :publishers
     resources :authors
     resources :languages
-    resources :categories, only: [:index, :new, :create]
+    resources :categories
   end
   resources :user_books
   resources :comments
+  resources :relationships, only: [:create, :destroy]
 end

@@ -102,3 +102,101 @@ Request.create!(
     book_id: 3,
     status: 2
   )
+
+Activity.create!(
+  user_id: 1,
+  target_id: 1,
+  target_type: 1,
+  action_type: 0
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 1,
+  target_type: 0,
+  action_type: 1
+)
+
+Activity.create!(
+  user_id: 1,
+  target_id: 1,
+  target_type: 0,
+  action_type: 2
+)
+
+Activity.create!(
+  user_id: 1,
+  target_id: 1,
+  target_type: 1,
+  action_type: 3
+)
+
+Activity.create!(
+  user_id: 1,
+  target_id: 2,
+  target_type: 0,
+  action_type: 2
+)
+
+Activity.create!(
+  user_id: 1,
+  target_id: 1,
+  target_type: 1,
+  action_type: 4
+)
+
+Activity.create!(
+  user_id: 1,
+  target_id: 1,
+  target_type: 1,
+  action_type: 5
+)
+
+Activity.create!(
+  user_id: 1,
+  target_id: 1,
+  target_type: 1,
+  action_type: 6
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 1,
+  target_type: 0,
+  action_type: 2
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 1,
+  target_type: 1,
+  action_type: 3
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 2,
+  target_type: 0,
+  action_type: 2
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 1,
+  target_type: 1,
+  action_type: 4
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 1,
+  target_type: 1,
+  action_type: 5
+)
+
+Activity.create!(
+  user_id: 2,
+  target_id: 1,
+  target_type: 1,
+  action_type: 6
+)

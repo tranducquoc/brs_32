@@ -19,6 +19,7 @@
  *= require_self
  */
 
+@import "bootstrap";
 @import "bootstrap/glyphicons";
 
 .padding_10px {
