@@ -22,12 +22,17 @@
                   <td><%= @user.created_at
                     .strftime(t "datetime_format.date_and_time") %></td>
                 </tr>
+                <tr>
+                  <td><%= t "follow.relationship" %></td>
+                  <td><%= render "shared/stats" %></td>
+                </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
         <div class="panel-footer">
+          <%= render "follow_form" if !current_user.nil? %>
           <%= mail_to @user.email, class: "btn btn-sm btn-primary" do %>
               <i class="glyphicon glyphicon-envelope"></i>
               <%= t ".send_mail" %>

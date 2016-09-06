@@ -16,6 +16,7 @@
 //= require bootstrap.min
 //= require star-rating.min
 //= require theme.min
+//= require relationships
 //= require fileinput.min
 //= require bootstrap-datetimepicker.min
 //= require social-share-button
