@@ -1,0 +1,84 @@
+<%= provide :title, t("admin.publishers.index.title") %>
+<div id="publishers">
+  <div class="row padding-top-50">
+    <div class="col-lg-12">
+      <%= link_to new_admin_publisher_path do %>
+        <%= button_tag t("admin.publishers.index.btn_add_publisher"),
+          class: "btn btn-primary box-shadow" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row padding-top-50">
+    <div class="col-lg-12 book-form-search">
+      <%= search_form_for @search, url: admin_publishers_path do |f| %>
+        <%= f.condition_fields do |condition| %>
+          <div class="col-lg-3">
+            <%= condition.attribute_fields do |attribute| %>
+              <%= attribute.attribute_select %>
+            <% end %>
+          </div>
+          <div class="col-lg-3">
+            <%= condition.predicate_select %>
+          </div>
+          <div class="col-lg-3">
+            <%= condition.value_fields do |value| %>
+              <%= value.text_field :value %>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="col-lg-3">
+          <%= f.submit t("admin.search"),
+            class: "btn btn-default books-btn-search" %>
+        </div>
+        <div class="col-lg-12 padding-0">
+          <div class="col-lg-5 padding-0">
+            <%= f.sort_fields do |sort| %>
+              <%= sort.sort_select %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row padding-top-50">
+    <div class="col-lg-12">
+      <table class="table table-bordered book-table">
+        <thead>
+        <tr>
+          <th class="width-5"><%= t ".numbers" %></th>
+          <th class="width-10"><%= t ".publisher_name" %></th>
+          <th class="width-10"><%= t ".publisher_address" %></th>
+          <th class="width-10"><%= t ".publisher_phone_number" %></th>
+          <th class="width-10"><%= t ".created_at" %></th>
+          <th class="width-10"><%= t ".edit" %></th>
+          <th class="width-10"><%= t ".delete" %></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @publishers.each_with_index do |publisher, index| %>
+          <tr>
+            <td><%= increase_one index %></td>
+            <td><%= publisher.name %></td>
+            <td><%= publisher.address %></td>
+            <td><%= publisher.phone_number %></td>
+            <td><%= publisher.created_at %></td>
+            <td>
+              <%= link_to edit_admin_publisher_path(publisher),
+                class: "btn btn-info font-size-20" do %>
+                <span class="glyphicon glyphicon-edit"></span>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to admin_publisher_path(publisher), method: :delete,
+                data: {confirm: t(".confirm_delete")},
+                class: "btn btn-danger font-size-20" do %>
+                <span class="glyphicon glyphicon-trash"></span>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

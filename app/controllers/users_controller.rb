@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :load_user, only: [:show, :edit, :update]
 
@@ -14,7 +15,6 @@ class UsersController < ApplicationController
 
   private
   def load_user
-    @user = User.find_by id: params[:id]
     unless @user
       flash[:danger] = t "users.not_found"
       redirect_to root_url

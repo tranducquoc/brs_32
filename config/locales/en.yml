@@ -182,6 +182,22 @@ en:
           success_create: "You have successfully created a new author!"
       form:
         submit_button: "Submit"
+      index:
+        title: "Authors List"
+        btn_add_author: "Add author"
+        numbers: "Numbers"
+        author_name: "Author name"
+        created_at: "Created at"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Are you sure to delete it?"
+      edit:
+        title: "Edit author"
+        success: "Edit author success!"
+        failed: "Edit author failed!"
+      destroy:
+        success: "Author is deleted successfully!"
+        failed: "Has error when try to deleted this author!"
     languages:
       new:
         title: "New language"
@@ -191,6 +207,22 @@ en:
           success_create: "You have successfully created a new language!"
       form:
         submit_button: "Submit"
+      index:
+        title: "Languages List"
+        btn_add_language: "Add language"
+        numbers: "Numbers"
+        language_name: "Language name"
+        created_at: "Created at"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Are you sure to delete it?"
+      edit:
+        title: "Edit language"
+        success: "Edit language success!"
+        failed: "Edit language failed!"
+      destroy:
+        success: "Language is deleted successfully!"
+        failed: "Has error when try to deleted this language!"
     publishers:
       new:
         title: "New publisher"
@@ -200,6 +232,24 @@ en:
           success_create: "You have successfully created a new publisher!"
       form:
         submit_button: "Submit"
+      index:
+        title: "Publishers List"
+        btn_add_publisher: "Add publisher"
+        numbers: "Numbers"
+        publisher_name: "Name"
+        publisher_address: "Address"
+        publisher_phone_number: "Phone number"
+        created_at: "Created at"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Are you sure to delete it?"
+      edit:
+        title: "Edit publisher"
+        success: "Edit publisher success!"
+        failed: "Edit publisher failed!"
+      destroy:
+        success: "Publisher is deleted successfully!"
+        failed: "Has error when try to deleted this publisher!"
     categories:
       new:
         title: "New Categories"

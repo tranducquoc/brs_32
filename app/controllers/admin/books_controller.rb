@@ -1,4 +1,5 @@
 class Admin::BooksController < ApplicationController
+  load_and_authorize_resource
   load_and_authorize_resource find_by: :slug
 
   before_action :authenticate_user!
@@ -30,11 +31,9 @@ class Admin::BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find_by id: params[:id]
   end
 
   def update
-    @book = Book.find_by id: params[:id]
     if @book.update(book_params)
       flash[:success] = I18n.t "admin.books.edit.success"
       redirect_to admin_root_path
@@ -45,7 +44,6 @@ class Admin::BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find_by id: params[:id]
     if @book.destroy
       flash[:success] = I18n.t "admin.books.destroy.success"
     else

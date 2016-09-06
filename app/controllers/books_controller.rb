@@ -27,7 +27,6 @@ class BooksController < ApplicationController
   private
 
   def load_book
-    @book = Book.find_by id: params[:id]
     if @book.nil?
       flash[:danger] = t "books.book_infomation.not_found"
       redirect_to root_url

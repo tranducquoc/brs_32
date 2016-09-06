@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160905183320) do
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "target_id"
+    t.integer  "target_type"
     t.integer  "action_type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -135,8 +136,6 @@ ActiveRecord::Schema.define(version: 20160905183320) do
     t.string   "password_digest"
     t.string   "remeber_digest"
     t.integer  "role",                   default: 1
-    t.string   "provider"
-    t.string   "uid"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false
