@@ -1,0 +1,4 @@
+<%= t "admin.mailer.approve_request.subject" %>
+
+ <%= t("admin.mailer.approve_request.content",
+    user: @request.user.name, book: @request.book.title ) %>

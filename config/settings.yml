@@ -24,3 +24,9 @@ user_book_status:
   read: 2
 requests:
   status: {waiting: "waiting", approved: "approved", rejected: "rejected"}
+  status_post: {approve: 1, rejecte: 2}
+mailer:
+  address: "smtp.gmail.com"
+  port: "587"
+  authentication: "plain"
+  host: "localhost:3000"

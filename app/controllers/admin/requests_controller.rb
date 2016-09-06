@@ -14,6 +14,9 @@ class Admin::RequestsController < ApplicationController
   def update
     @request = Request.find_by id: params[:id]
     if @request.update_attribute(:status, params[:status].to_i)
+      if params[:status].to_i == Settings.requests.status_post[:approve]
+         AdminMailer.approve_request(@request).deliver_now
+      end
       respond_to do |format|
         format.json do
           render json: {
