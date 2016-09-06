@@ -11,19 +11,31 @@
           <%= link_to (t "devise.header.users"), users_path %>
         </li>
         <li>
-          <a href="#"><%= t "nav_example.e_books" %></a>
+          <% if current_user.is_admin? %>
+            <%= link_to (t "devise.header.books"), admin_books_path %>
+          <% else %>
+            <%= link_to (t "devise.header.books"), books_path %>
+          <% end %>
         </li>
         <li class="arrow_down">
-          <a href="#"><%= t "nav_example.books" %></a>
+          <% if current_user.is_admin? %>
+            <%= link_to (t "admin.books.new.categories"), admin_categories_path %>
+          <% end %>
         </li>
         <li>
-          <a href="#"><%= t "nav_example.text_books" %></a>
+          <% if current_user.is_admin? %>
+            <%= link_to (t "admin.books.new.authors"), admin_authors_path %>
+          <% end %>
         </li>
         <li>
-          <a href="#"><%= t "nav_example.business" %></a>
+          <% if current_user.is_admin? %>
+            <%= link_to (t "admin.books.new.publishers"), admin_publishers_path %>
+          <% end %>
         </li>
         <li>
-          <a href="#"><%= t "nav_example.magazines" %></a>
+          <% if current_user.is_admin? %>
+            <%= link_to (t "admin.books.new.languages"), admin_languages_path %>
+          <% end %>
         </li>
       </ul>
     </div>
