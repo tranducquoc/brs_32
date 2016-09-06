@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160828132727) do
+ActiveRecord::Schema.define(version: 20160905183320) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -44,12 +44,14 @@ ActiveRecord::Schema.define(version: 20160828132727) do
     t.float    "average_rating"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.string   "slug"
   end
 
   add_index "books", ["author_id"], name: "index_books_on_author_id"
   add_index "books", ["category_id"], name: "index_books_on_category_id"
   add_index "books", ["language_id"], name: "index_books_on_language_id"
   add_index "books", ["publisher_id"], name: "index_books_on_publisher_id"
+  add_index "books", ["slug"], name: "index_books_on_slug"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -106,9 +108,9 @@ ActiveRecord::Schema.define(version: 20160828132727) do
   create_table "requests", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "book_id"
-    t.integer  "status",     default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "requests", ["book_id"], name: "index_requests_on_book_id"

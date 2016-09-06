@@ -1,4 +1,6 @@
 class Admin::BooksController < ApplicationController
+  load_and_authorize_resource find_by: :slug
+
   before_action :authenticate_user!
   before_action :verify_admin
   before_action :load_books_association, only: [:new, :edit]
