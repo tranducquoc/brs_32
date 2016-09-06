@@ -262,6 +262,10 @@ en:
       edit_button: "Edit info"
       created_date: "Created date"
       email: "Email"
+    mailer:
+      approve_request:
+        subject: "[Framgia] Approve Request Buy Book"
+        content: "Hi %{user} your request to buy book '%{book}' has been approved"
   datetime_format:
     date_and_time: "%Y/%b/%d %H:%M"
   follow:
