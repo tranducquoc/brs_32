@@ -11,22 +11,22 @@
   <div class="row padding-top-50">
     <div class="col-lg-12 book-form-search">
       <%= search_form_for @search, url: admin_books_path do |f| %>
-          <%= f.condition_fields do |condition| %>
-            <div class="col-lg-3">
-              <%= condition.attribute_fields do |attribute| %>
-                <%= attribute.attribute_select associations: [:category,
-                  :author, :publisher, :language] %>
-              <% end %>
-            </div>
-            <div class="col-lg-3">
-              <%= condition.predicate_select %>
-            </div>
-            <div class="col-lg-3">
-              <%= condition.value_fields do |value| %>
-                <%= value.text_field :value %>
-              <% end %>
-            </div>
-          <% end %>
+        <%= f.condition_fields do |condition| %>
+          <div class="col-lg-3">
+            <%= condition.attribute_fields do |attribute| %>
+              <%= attribute.attribute_select associations: [:category,
+                :author, :publisher, :language] %>
+            <% end %>
+          </div>
+          <div class="col-lg-3">
+            <%= condition.predicate_select %>
+          </div>
+          <div class="col-lg-3">
+            <%= condition.value_fields do |value| %>
+              <%= value.text_field :value %>
+            <% end %>
+          </div>
+        <% end %>
         <div class="col-lg-3">
           <%= f.submit t("admin.search"),
             class: "btn btn-default books-btn-search" %>
@@ -74,7 +74,8 @@
               <td><%= book.publisher.name %></td>
               <td><%= check_box_tag "", "", book.is_in_library,
                 disabled: true, class: "font-size-20" %></td>
-              <td><%= book.created_at %></td>
+              <td><%= book.created_at
+                .strftime(t "datetime_format.date_and_time") %></td>
               <td>
                 <%= link_to edit_admin_book_path(book),
                   class: "btn btn-info font-size-20" do %>
