@@ -167,13 +167,13 @@ en:
           success_create: "You have successfully created a new author!"
       form:
         submit_button: "Submit"
-    authors:
+    languages:
       new:
-        title: "New author"
+        title: "New language"
         flash:
-          error_create: "Errors occured while creating new author, please try
+          error_create: "Errors occured while creating new language, please try
            again!"
-          success_create: "You have successfully created a new author!"
+          success_create: "You have successfully created a new language!"
       form:
         submit_button: "Submit"
     publishers:
