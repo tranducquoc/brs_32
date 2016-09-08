@@ -37,6 +37,11 @@ group :development, :test do
   gem "web-console", "2.0.0.beta3"
   gem "spring",      "1.1.3"
   gem "pry-rails"
+  gem "rspec-rails", "~> 3.0"
+  gem "factory_girl_rails", "~> 4.0"
+  gem "capybara"
+  gem "simplecov", require: false, group: :test
+  gem "shoulda-matchers", "~> 3.1"
 end
 
 group :production do
