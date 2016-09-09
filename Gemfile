@@ -40,6 +40,8 @@ group :development, :test do
   gem "rspec-rails", "~> 3.0"
   gem "factory_girl_rails", "~> 4.0"
   gem "capybara"
+  gem "simplecov", require: false, group: :test
+  gem "shoulda-matchers", "~> 3.1"
 end
 
 group :production do
