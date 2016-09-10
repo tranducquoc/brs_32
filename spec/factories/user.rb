@@ -28,5 +28,35 @@ FactoryGirl.define do
         create_list(:request, evaluator.requests_count, user: user)
       end
     end
+
+    factory :user_favorite_books do
+      transient do
+        favorite_count 2
+      end
+
+      after(:create) do |user, evaluator|
+        create_list(:user_book, evaluator.favorite_count, user: user)
+      end
+    end
+
+    factory :user_read_books do
+      transient do
+        read_count 2
+      end
+
+      after(:create) do |user, evaluator|
+        create_list(:user_book_read, evaluator.read_count, user: user)
+      end
+    end
+
+    factory :user_reading_books do
+      transient do
+        reading_count 2
+      end
+
+      after(:create) do |user, evaluator|
+        create_list(:user_book_reading, evaluator.reading_count, user: user)
+      end
+    end
   end
 end
