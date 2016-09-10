@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :book do
-    title "Title of the book"
+    title "Titleofthebook"
     cover_image_name "book.jpg"
     number_of_pages "100"
     description "This is description of the book! I say again: This is description of the book!"

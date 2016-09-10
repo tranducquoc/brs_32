@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-ruby "2.3.1"
 
 gem "rails",        "4.2.6"
 gem "sprockets",    "3.6.3"
@@ -41,7 +40,7 @@ group :development, :test do
   gem "rspec-collection_matchers"
   gem "factory_girl_rails", "~> 4.0"
   gem "capybara"
-  gem "simplecov", require: false, group: :test
+  gem "simplecov", require: false
   gem "shoulda-matchers", "~> 3.1"
   gem "database_cleaner"
 end
