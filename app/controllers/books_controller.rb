@@ -1,8 +1,5 @@
 class BooksController < ApplicationController
-  load_and_authorize_resource find_by: :slug
-
   before_action :authenticate_user!
-  before_action :load_book, only: :show
 
   def index
     params[:books_filter] ||= Settings.books_filter[:category]
@@ -18,18 +15,10 @@ class BooksController < ApplicationController
   end
 
   def show
+    @book = Book.find_by id: params[:id]
     unless @book
       flash[:danger] = t "books.book_infomation.not_found"
       redirect_to books_path
-    end
-  end
-
-  private
-
-  def load_book
-    if @book.nil?
-      flash[:danger] = t "books.book_infomation.not_found"
-      redirect_to root_url
     end
   end
 end
