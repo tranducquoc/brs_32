@@ -355,8 +355,5 @@ DEPENDENCIES
   web-console (= 2.0.0.beta3)
   whenever
 
-RUBY VERSION
-   ruby 2.3.1p112
-
 BUNDLED WITH
    1.12.5
